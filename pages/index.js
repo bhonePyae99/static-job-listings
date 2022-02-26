@@ -4,7 +4,9 @@ import axios from "axios";
 import { useState } from "react";
 
 export const getServerSideProps = async () => {
-  const resp = await axios.get("http://localhost:3000/api/data");
+  const resp = await axios.get(
+    "https://static-job-listings-ten.vercel.app/api/data"
+  );
   return { props: { data: resp.data } };
 };
 
